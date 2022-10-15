@@ -1,23 +1,18 @@
 import styles from '../styles/Home.module.css'
-import axios from 'axios';
-import { useState, useEffect } from 'react';
+import Casas from '../src/components/Casas';
+import Header from '../src/components/Header';
+import Navegacao from '../src/Navegacao';
+import Corpo from '../src/components/Corpo';
 
 
- function Home() {
-  const [resposta, setResposta] = useState()
-
-  useEffect(()=>{
-    axios.get('https://hp-api.herokuapp.com/api/characters') 
-    .then(function (response){
-      setResposta(response.data);
-    })
-  },[])
+function Home() {
 
   return (
-    <div>
-      Teste
-      {resposta.name}
-
+    <div className={styles.fundo}>
+        <Header/>
+        <Corpo/>
+        <Navegacao/>
+        <Casas/>
     </div>
   )
 }
