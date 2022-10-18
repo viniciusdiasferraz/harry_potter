@@ -6,7 +6,6 @@ function Navegacao() {
     return (
         <section className={styles.navegacao}>
             <button class= {styles.button}>veja todos os personagens</button>
-            
         </section>
     )
 }

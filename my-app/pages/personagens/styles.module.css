@@ -1,0 +1,51 @@
+.cardspersonagens{
+    background-image: url(../../public/background_harry_azul_marinho\ 1.png);
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.textpersonagens{
+    display: flex;
+    color: #A6955A;
+    width: 72px;
+    height: 84px;
+    margin-top: 60px;
+}
+
+.textpersonagens img{
+    margin-right:15px ;
+}
+
+.textpersonagens h1{
+    font-weight: 400;
+    font-size: 24px;
+    text-transform: uppercase
+}
+
+
+
+.cards {
+    font: arial;
+    font-size: 25px;
+    font-weight: 400;
+    color: #A6955A;
+    text-align: center;
+    position: relative;
+}
+
+.cards img{   
+    width: 163px;
+    height: 227px;
+    border-style:solid ;
+    margin-top: 180px;
+    margin-left:100px ;
+    margin-right: 100px;
+    cursor: pointer;
+
+}
+
+
+.text {
+    margin-top: 0px;
+}

@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-
+import HeaderPersonagens from '../../src/components/Headerpersonagens';
+import styles from '../personagens/styles.module.css'
 
 function Personagens() {
   const [resposta, setResposta] = useState()
@@ -15,20 +16,23 @@ function Personagens() {
   console.log(resposta, "resposta")
 
   return (
-    <div>
-      Teste
+  
+    <div className={styles.cardspersonagens}>
+      <HeaderPersonagens/>
+    <div className={styles.textpersonagens}>
+      <img src='./hogwarts_shield 1.png'></img>
+      <h1>Personagens</h1>
+
+    </div>
 
       {
-        resposta.map(item => {
+        resposta?.map(item => {
 
-          return (
-            <div>
-              <p>{item.name}</p>
-              <p>{item.species}</p>
-              <img src={item.image}></img>
-
-            </div>
-
+          return (     
+              <div className={styles.cards}>
+                <img clasname={styles.image} src={item.image}></img>
+                <p className={styles.text}>{item.name}</p>
+              </div>
           )
         })
       }
