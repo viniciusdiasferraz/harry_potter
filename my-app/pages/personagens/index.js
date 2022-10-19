@@ -12,8 +12,11 @@ function Personagens() {
         setResposta(response.data);
       })
   }, [])
+  
 
   console.log(resposta, "resposta")
+
+
 
   return (
   
@@ -21,7 +24,9 @@ function Personagens() {
       <HeaderPersonagens/>
     <div className={styles.textpersonagens}>
       <img src='./hogwarts_shield 1.png'></img>
-      <h1>Personagens</h1>
+      <p>Personagens</p>
+      <div className={styles.line}></div>
+      
 
     </div>
 
