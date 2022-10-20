@@ -9,7 +9,6 @@ function Home() {
 
   return (
     <div className={styles.fundo}>
-
         <Header/>
         <Corpo/>
         <Navegacao/>
