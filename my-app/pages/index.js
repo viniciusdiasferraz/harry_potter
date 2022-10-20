@@ -1,7 +1,7 @@
 import styles from '../styles/Home.module.css'
 import Casas from '../src/components/Casas';
 import Header from '../src/components/Header';
-import Navegacao from '../src/Navegacao';
+import Navegacao from '../src/components/Navegacao';
 import Corpo from '../src/components/Corpo';
 
 

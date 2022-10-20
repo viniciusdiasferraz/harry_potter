@@ -1,6 +1,8 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-
+import HeaderPersonagens from '../../src/components/Headerpersonagens';
+import Modal from '../../src/components/Modal';
+import styles from '../personagens/styles.module.css'
 
 function Personagens() {
   const [resposta, setResposta] = useState()
@@ -12,26 +14,36 @@ function Personagens() {
       })
   }, [])
 
+
   console.log(resposta, "resposta")
 
+  const [openModalPersonagens, setOpenModalPersonagens] = useState(false);
+
   return (
-    <div>
-      Teste
+
+    <div className={styles.cardspersonagens}>
+      <HeaderPersonagens />
+      <div className={styles.textpersonagens}>
+        <img src='./hogwarts_shield 1.png'></img>
+        <p>Personagens</p>
+        <div className={styles.line}></div>
+      </div>
 
       {
-        resposta.map(item => {
+        resposta?.map(item => {
 
           return (
-            <div>
-              <p>{item.name}</p>
-              <p>{item.species}</p>
-              <img src={item.image}></img>
-
+            <div className={styles.cards}>
+              <button className={styles.openmodal} onClick={()=>{setOpenModalPersonagens(true)}}>
+                <img clasname={styles.image} src={item.image ? item.image : './perfil.jpg'}></img>
+                <p className={styles.text}>{item.name}</p>
+              </button>
+              {openModalPersonagens && <Modal/>}
             </div>
-
           )
         })
       }
+     
     </div>
   )
 }

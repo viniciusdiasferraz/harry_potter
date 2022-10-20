@@ -3,17 +3,26 @@ import styles from './styles.module.css'
 
 function Casas() {
   return (
-    <div>
+    <div className={styles.corpocasas}>
       <section className={styles.entrecasas}>
         <img src='./hogwarts_shield 1.png'></img>
         <p>navegue pelas casas</p>
+        <div className={styles.line}></div>
       </section>
 
       <section className={styles.casa}>
-        <img src='./grifinoria.png'></img>
-        <img src='./sonserina.png'></img>
-        <img src='./lufa-lufa.png'></img>
-        <img src='./corvinal.png'></img>
+        <div className={styles.classes}>
+          <img src='./grifinoria.png'></img>
+        </div>
+        <div className={styles.classes}>
+          <img src='./sonserina.png'></img>
+        </div>
+        <div className={styles.classes}>
+          <img src='./lufa-lufa.png'></img>
+        </div>
+        <div className={styles.classes}>
+          <img src='./corvinal.png'></img>
+        </div>
       </section>
 
     </div>
