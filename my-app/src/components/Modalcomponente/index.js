@@ -1,26 +1,25 @@
 import React from "react";
-import axios from "axios";
-import styles from './styles.module.css';
-import { useState, useEffect } from "react";
-import Modal from 'react-modal'
+import styles from '../Modalcomponente/styles.module.css'
 
-function Modalcomponente (name,house,species,dateOfBirth,gender,patronus,wand,ancestry,actor){
-    return(
-        <div className={styles.Modalcomponente}>
-            <button> X </button>
+
+function Modalcomponente(image, name, house, dateOfBirth, gender, patronus, wand, wood, core, length, ancestry, actor) {
+    return (
+        <div>
+            <img width={'256px'} height={'356px'} src={item.image} />
+            <p>Nome:{item.name}</p>
+            <p>Casa:{item.house}</p>
+            <p>Data de Nasc:{item.dateOfBirth}</p>
+            <p>Gênero:{item.gender}</p>
+            <p>Patronus:{item.patronus}</p>
+            <p>varinha:</p>
             <div>
-                {/* <p>{name}</p>
-                <p>{house}</p>
-                <p>{species}</p>
-                <p>{dateOfBirth}</p>
-                <p>{gender}</p>
-                <p>{patronus}</p>
-                <p>{wand.wood}</p>
-                <p>{wand.core}</p>
-                <p>{wand.length}</p>
-                <p>{ancestry}</p> */}
-                <p>{item.actor}</p>
+                <p>- Madeira{item.wand.wood}</p>
+                <p>- Núcleo{item.wand.core}</p>
+                <p>- Comprimnto{item.wand.length}</p>
             </div>
+            <p>Ancestralidade:{item.ancestry}</p>
+            <p>Ator:{item.actor}</p>
+            <button onClick={handleClose}>X</button>
         </div>
     )
 }
