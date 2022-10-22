@@ -1,11 +1,11 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import HeaderPersonagens from '../../src/components/Headerpersonagens';
-import styles from '../personagens/styles.module.css'
-import Modal from 'react-modal';
 import Modalcomponente from '../../src/components/Modalcomponente';
+import Card from '../../src/components/Card'
+import styles from '../personagens/styles.module.css';
 
-// Modal.setAppElement ("#root");
+
 
 function Personagens() {
   const [resposta, setResposta] = useState()
@@ -15,20 +15,21 @@ function Personagens() {
       .then(function (response) {
         setResposta(response.data);
       })
+
   }, [])
 
 
   console.log(resposta, "resposta")
 
-  const [modalIsOpen, setIsOpen] = useState(false);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
-  function openModal (){
-    setIsOpen(true);
+  function openModal() {
+    setModalIsOpen(true);
   }
 
 
-  function closeModal () {
-    setIsOpen(false);
+  function closeModal() {
+    setModalIsOpen(false);
   }
 
   return (
@@ -41,20 +42,15 @@ function Personagens() {
         <div className={styles.line}></div>
       </div>
 
+
+
       {
         resposta?.map(item => {
 
           return (
             <div className={styles.cards}>
               <button className={styles.openmodal} onClick={openModal}>
-                <Modal
-                isOpen={modalIsOpen}
-                onRequestClose={closeModal}
-                contentLabel=""
-                overlayClassName=""
-                className=""
-                
-                />
+                {modalIsOpen && <Modalcomponente/>}
                 <img clasname={styles.image} src={item.image ? item.image : './perfil.jpg'}></img>
                 <p className={styles.text}>{item.name}</p>
               </button>
@@ -63,8 +59,6 @@ function Personagens() {
         })
       }
 
-       
-       
     </div>
   )
 }
