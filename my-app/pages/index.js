@@ -8,11 +8,14 @@ import Corpo from '../src/components/Corpo';
 function Home() {
 
   return (
-    <div className={styles.fundo}>
-        <Header/>
-        <Corpo/>
-        <Navegacao/>
-        <Casas/>
+    <div className={styles.headerhome}>
+      <div className={styles.corpo}></div>
+      <div className={styles.fundo}>
+        <Header />
+        <Corpo />
+        <Navegacao />
+        <Casas />
+      </div>
     </div>
   )
 }

@@ -2,10 +2,20 @@
     background-color:#A6955A;
     height: 103px;
     width: 100%;
+    margin-top: -103px;
 }
 
 
 .headerpersonagens img {
     margin-top: 15px;
     margin-left: 45%;
+
+}
+
+@media screen and (max-width: 360px){
+    .headerpersonagens{
+        width: 100% ;
+        background-color:#A6955A;
+    }
+   
 }

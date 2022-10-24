@@ -4,9 +4,11 @@
     width: 100%;
 }
 
+
 .corpo{
     background-image: url(../../public/background_harry_azul_marinho\ 1.png);
     width: 100%;
+    
 }
 
 .cardspersonagens{
@@ -87,7 +89,9 @@
 
 .text {
     margin-top: 0px;
+    margin-left: 125px;
 }
+
 
 
 .openmodal{
