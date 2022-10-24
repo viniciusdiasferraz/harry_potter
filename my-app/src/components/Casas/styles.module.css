@@ -12,16 +12,19 @@
   height: 90px;
   }
 
-
+  .entrecasas img {
+    width:72px;
+    height:84px;
+  }
 
 .entrecasas p{
   font-weight: 400;
   font-size: 24px;
-  text-transform: uppercase;
   color:  #A6955A;
-  margin-left: 20px;
+  margin-left: 10px;
   margin-top: 30px;
-  margin-right: 25px
+  margin-right: 25px;
+  width: 250px;
 }
 
 .line {
@@ -41,6 +44,22 @@
 
 }
 
-.classes{
+.button{
   cursor: pointer;
+  background: transparent;
+  border: none;
+  
+}
+
+@media screen and (max-width: 420px){
+  .casa{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+
+  .classes {
+    margin-bottom: 20px;
+  }
 }

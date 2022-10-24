@@ -4,6 +4,7 @@
     width: 100%;
 }
 
+
 .corpo{
     background-image: url(../../public/background_harry_azul_marinho\ 1.png);
     width: 100%;
@@ -49,7 +50,6 @@
     margin-top: 40px;
     margin-left: 30px;
     border-color: #A6955A;
-    background-color: #A6955A;
   }
 
   .containerCards{
@@ -87,7 +87,9 @@
 
 .text {
     margin-top: 0px;
+    margin-left: 125px;
 }
+
 
 
 .openmodal{

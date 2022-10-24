@@ -2,5 +2,15 @@
     background-image: url(../public/hp-reu-hero2\ 2.png);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    width: 100%;
+    margin: 0 auto;
   }
+
+  @media screen and (max-width: 420px) {
+    .fundo{
+      max-width: 420px;
+      width: 100%;
+    } 
+    
+  }
+

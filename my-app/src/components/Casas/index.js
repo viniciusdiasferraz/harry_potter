@@ -6,22 +6,30 @@ function Casas() {
     <div className={styles.corpocasas}>
       <section className={styles.entrecasas}>
         <img src='./hogwarts_shield 1.png'></img>
-        <p>navegue pelas casas</p>
+        <p>Navegue pelas Casas</p>
         <div className={styles.line}></div>
       </section>
 
       <section className={styles.casa}>
         <div className={styles.classes}>
-          <img src='./grifinoria.png'></img>
+          <button class= {styles.button} onClick={()=>window.location.href = 'http:/grifnoria'}>
+            <img src='./grifinoria.png'></img>
+          </button>
         </div>
         <div className={styles.classes}>
-          <img src='./sonserina.png'></img>
+          <button class= {styles.button} onClick={()=>window.location.href = 'http:/sonserina'}>
+            <img src='./sonserina.png'></img>
+          </button>
         </div>
         <div className={styles.classes}>
-          <img src='./lufa-lufa.png'></img>
+          <button class= {styles.button} onClick={()=>window.location.href = 'http:/lufalufa'}>
+            <img src='./lufa-lufa.png'></img>
+          </button>
         </div>
         <div className={styles.classes}>
-          <img src='./corvinal.png'></img>
+          <button class= {styles.button} onClick={()=>window.location.href = 'http:/cornival'}>
+            <img src='./corvinal.png'></img>
+          </button>
         </div>
       </section>
 
