@@ -8,7 +8,7 @@ function Grifnoria() {
     const [resposta, setResposta] = useState()
 
     useEffect(() => {
-        axios.get('https://hp-api.herokuapp.com/api/characters/house/gryffindor')
+        axios.get('https://hp-api.onrender.com/api/characters/house/gryffindor')
             .then(function (response) {
                 setResposta(response.data);
             })

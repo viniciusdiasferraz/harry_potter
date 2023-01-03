@@ -9,7 +9,7 @@ function Cornival() {
     const [resposta, setResposta] = useState()
 
     useEffect(() => {
-        axios.get('https://hp-api.herokuapp.com/api/characters/house/Ravenclaw')
+        axios.get('https://hp-api.onrender.com/api/characters/house/Ravenclaw')
             .then(function (response) {
                 setResposta(response.data);
             })

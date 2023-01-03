@@ -9,7 +9,7 @@ function Sonserina() {
     const [resposta, setResposta] = useState()
 
     useEffect(() => {
-        axios.get('https://hp-api.herokuapp.com/api/characters/house/slytherin')
+        axios.get('https://hp-api.onrender.com/api/characters/house/slytherin')
             .then(function (response) {
                 setResposta(response.data);
             })
