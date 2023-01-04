@@ -4,7 +4,6 @@
     width: 100%;
 }
 
-
 .corpo{
     background-image: url(../../public/background_harry_azul_marinho\ 1.png);
     width: 100%;
@@ -88,9 +87,7 @@
 
 .text {
     margin-top: 0px;
-    margin-left: 125px;
 }
-
 
 
 .openmodal{
@@ -103,6 +100,27 @@
     text-align: center;
     position: relative;
 }
+
+.close{
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    position: absolute;
+    background-color: black;
+    opacity: 65%;
+}
+
+.modal{
+    position: fixed;
+    left: 0;
+    top:0;
+    right: 0;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
 
 
 @media(max-width: 1120px) {

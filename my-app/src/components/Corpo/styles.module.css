@@ -2,3 +2,19 @@
     margin-top:108px;
     margin-left: 77px;
 }
+
+@media(max-width:768px){
+   .logo{
+    display: flex;
+    justify-content: center;
+    margin-top:0;
+    margin-left: 0;
+    padding: 10px;
+   }
+}
+
+@media(max-width:425px){
+    .logo img{
+        width: 213px;
+    }
+}

@@ -23,6 +23,11 @@ function Personagens() {
     selectPerson();
   }, []);
 
+
+	const closeModal = () => {
+    setModalIsOpen(!modalIsOpen)
+  }
+
   console.log(resposta, "resposta");
 
   return (
@@ -32,7 +37,7 @@ function Personagens() {
         <HeaderPersonagens />
         <div className={styles.textpersonagens}>
           <img src="./hogwarts_shield 1.png"></img>
-          <p>Personagens</p>
+          <p className={styles.p}>Personagens</p>
           <div className={styles.line}></div>
         </div>
 
@@ -46,7 +51,7 @@ function Personagens() {
                 >
                   <img
                     clasname={styles.image}
-                    src={item.image ? item.image : "./perfil.jpg"}
+                    src={item.image ? item.image : "./imagem.jpg"}
                   ></img>
                   <p className={styles.text}>{item.name}</p>
                 </button>
@@ -62,7 +67,7 @@ function Personagens() {
                   className={styles.close}
                 ></div>
                 <Modalcomponente
-                imagem={itemSelected.image}
+                imagem={itemSelected.image ? itemSelected.image : "./imagem.jpg"}
                   nome={itemSelected.name}
                   casa={itemSelected.house}
                   especie={itemSelected.species}
@@ -74,6 +79,8 @@ function Personagens() {
                   comprimento={itemSelected.wand.length}
                   ancestralidade={itemSelected.ancestry}
                   ator={itemSelected.actor}
+                  isOpen={modalIsOpen}
+                  setIsOpen={setModalIsOpen}
                 />
               </>
             )}

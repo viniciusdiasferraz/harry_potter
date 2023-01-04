@@ -1,0 +1,72 @@
+
+.cards{
+    display: flex;
+    width: 704px;
+    height: 453px;
+    background-color:  #171717;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    margin-top: 15%;
+}
+
+.buttondiv{
+    height: 21px;
+    position: absolute;
+    margin-top: 20px;
+    width: 664px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button{
+    background-color: #A6955A;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;  
+}
+
+.imgcard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 70px;
+}
+
+.imagem{
+    width: 256px;
+    height: 356px;
+    border: solid;
+    border-color: #A6955A ;
+}
+
+.descriptioncard{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.descricao{
+    width:334px;
+    height: 406px;
+    color: #A6955A;
+}
+
+.descricao p{
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.descricao h1{
+    font-size: 17px;
+      font-weight: 400;
+      margin: 4px 10px;
+  }
+
+  .descricao span{
+    color: white;
+    margin-left: 5px;
+  }
+
+

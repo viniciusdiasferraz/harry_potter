@@ -7,10 +7,23 @@
     height: 100vh;
   }
 
-  @media screen and (max-width: 420px) {
+  @media(max-width:667px){
     .fundo{
-      max-width: 420px;
-      width: 100%;
+      background: #031C29;
+      height: 155vh;
+    }
+  }
+
+  @media(max-width:425px){
+    .fundo{
+        background: #031C29;
+        height: 152vh;
+    }
+}
+
+  @media  (max-width: 375px) {
+    .fundo{
+    height: 156vh;
     } 
     
   }

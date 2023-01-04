@@ -19,3 +19,26 @@
     cursor: pointer;
 }
 
+@media(max-width:768px){
+    .navegacao{
+        display: flex;
+    justify-content: center;
+    }
+    .button{
+        width:50%;
+        margin-left: 0;
+        margin-top: 29px;
+    }
+}
+
+@media(max-width:425px){
+    .button{
+        font-size: 21px;
+    }
+}
+
+@media(max-width:320px){
+    .button{
+        width: 65%;
+    }
+}

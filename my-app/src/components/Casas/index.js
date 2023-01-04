@@ -5,7 +5,7 @@ function Casas() {
   return (
     <div className={styles.corpocasas}>
       <section className={styles.entrecasas}>
-        <img src='./hogwarts_shield 1.png'></img>
+        <img clasname={styles.hogwarts} src='./hogwarts_shield 1.png'></img>
         <p>Navegue pelas Casas</p>
         <div className={styles.line}></div>
       </section>
