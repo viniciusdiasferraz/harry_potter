@@ -38,7 +38,7 @@ function Grifnoria() {
             <HeaderPersonagens />
             <div className={styles.textpersonagens}>
               <img src="./hogwarts_shield 1.png"></img>
-              <p className={styles.p}>Grifnoria</p>
+              <p className={styles.p}>Grifinória</p>
               <div className={styles.line}></div>
             </div>
     

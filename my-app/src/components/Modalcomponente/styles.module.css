@@ -69,4 +69,95 @@
     margin-left: 5px;
   }
 
+  @media (max-width:1024px){
+    .cards{
+        margin-top: 26%;
+    }
+  }
+
+  @media (max-width:768px){
+    .cards{
+    width: 74%;
+    height: 535px;
+  }
+
+  .imgcard{
+    padding: 0px;
+  }
+
+  .imagem{
+    width: 399px;
+    height: 477px;
+  }
+
+  .buttondiv{
+    width: 70%;
+  }
+
+  .button{
+    width: 50px;
+    height: 50px;
+  }
+
+  .descriptioncard{
+    height: 83%;
+  }
+
+  .descricao p{
+    font-size: 26px;
+  }
+
+  .descricao h1{
+    font-size: 22px;
+  }
+}
+
+@media (max-width:425px){
+    .cards{
+        width: 74%;
+        height: 170vh;
+        margin-top: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imgcard{
+        padding: 35px;
+      }
+
+      .imagem{
+        width: 512px;
+        height: 581px;
+      }
+
+      .buttondiv{
+        width: 94%;
+        position: relative;
+      }
+
+      .button{
+        width: 85px;
+        height: 85px;
+        font-size: 52px;
+      }
+
+      .descricao{
+        width: 834px;
+        height: 820px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+      }
+
+      .descricao p{
+        font-size: 40px;
+      }
+    
+      .descricao h1{
+        font-size: 35px;
+      }
+}
+
 

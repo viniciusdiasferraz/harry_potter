@@ -13,11 +13,30 @@ function Personagens() {
     setModalIsOpen(true);
   };
 
-  const selectPerson = () => {
-    axios.get("https://hp-api.onrender.com/api/characters").then((response) => {
-      setResposta(response.data);
-    });
+  const baseURL =  "https://hp-api.onrender.com/api/characters"
+
+  const selectPerson = (casa) => {
+    if(casa === 'todos'){
+      axios.get(baseURL).then((response) => {
+        setResposta(response.data);
+      });
+    }
+    else{
+      axios.get(baseURL).then((response) => {
+        setResposta(response.data);
+      });
+    }
   };
+
+  const [casa, setCasa] = useState()
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      setCasa(params.toString().replace('casa=', ''))
+      selectPerson(casa)                   
+    }
+  }, [casa])
 
   useEffect(() => {
     selectPerson();
