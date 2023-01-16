@@ -5,14 +5,6 @@ const Card = ({card, key}) => {
     return (
         <div>
             <div className={styles.cards}>
-            {/* <Modal
-            isOpen={modalIsOpen}
-            onRequestClose={closeModal}
-            contentLabel=""
-            overlayClassName=""
-            className=""
-            
-            /> */}
                 <div className={styles.card}>
                     {card.image != "" &&
                         <div>

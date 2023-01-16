@@ -8,46 +8,63 @@ function Personagens() {
   const [resposta, setResposta] = useState();
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [itemSelected, setItemSelected] = useState(null);
+  const [casa, setCasa] = useState()
   const selectCharacter = (item) => {
     setItemSelected(item);
     setModalIsOpen(true);
   };
 
-  const baseURL =  "https://hp-api.onrender.com/api/characters"
+  
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      setCasa(params.toString().replace('casa=', ''))                 
+    }
+  }, [])
 
-  const selectPerson = (casa) => {
+  const baseURL =  "https://hp-api.onrender.com/api/characters"
+  const urlCasa = `https://hp-api.onrender.com/api/characters/house/${casa}`
+
+  useEffect(() => {
+    if (casa){
     if(casa === 'todos'){
       axios.get(baseURL).then((response) => {
         setResposta(response.data);
       });
     }
     else{
-      axios.get(baseURL).then((response) => {
+      axios.get(urlCasa).then((response) => {
         setResposta(response.data);
       });
     }
-  };
-
-  const [casa, setCasa] = useState()
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const params = new URLSearchParams(window.location.search);
-      setCasa(params.toString().replace('casa=', ''))
-      selectPerson(casa)                   
-    }
+  }
   }, [casa])
-
-  useEffect(() => {
-    selectPerson();
-  }, []);
-
 
 	const closeModal = () => {
     setModalIsOpen(!modalIsOpen)
   }
 
-  console.log(resposta, "resposta");
+
+  const casastxt = () =>{
+    switch (casa){
+      case "todos":
+        return "Personagens";
+      case "gryffindor":
+        return "Grifinória";
+      case "hufflepuff":
+        return "Lufa-Lufa";
+      case "Ravenclaw":
+        return "Corvinal";
+      case "slytherin":
+        return "Sonserina";
+
+      default:
+        "Desconhecido";
+    }
+  };
+    
+
+
 
   return (
     <div className={styles.corpo}>
@@ -56,7 +73,7 @@ function Personagens() {
         <HeaderPersonagens />
         <div className={styles.textpersonagens}>
           <img src="./hogwarts_shield 1.png"></img>
-          <p className={styles.p}>Personagens</p>
+          <p className={styles.p}>{casastxt()}</p>
           <div className={styles.line}></div>
         </div>
 

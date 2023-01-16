@@ -12,22 +12,22 @@ function Casas() {
 
       <section className={styles.casa}>
         <div className={styles.classes}>
-          <button class= {styles.button} onClick={()=>window.location.href = 'http:/grifnoria'}>
+          <button class= {styles.button} onClick={()=>window.location.href = '/personagens?casa=gryffindor'}>
             <img src='./grifinoria.png'></img>
           </button>
         </div>
         <div className={styles.classes}>
-          <button class= {styles.button} onClick={()=>window.location.href = 'http:/sonserina'}>
+          <button class= {styles.button} onClick={()=>window.location.href = '/personagens?casa=slytherin'}>
             <img src='./sonserina.png'></img>
           </button>
         </div>
         <div className={styles.classes}>
-          <button class= {styles.button} onClick={()=>window.location.href = 'http:/lufalufa'}>
+          <button class= {styles.button} onClick={()=>window.location.href = '/personagens?casa=hufflepuff'}>
             <img src='./lufa-lufa.png'></img>
           </button>
         </div>
         <div className={styles.classes}>
-          <button class= {styles.button} onClick={()=>window.location.href = 'http:/cornival'}>
+          <button class= {styles.button} onClick={()=>window.location.href = '/personagens?casa=Ravenclaw'}>
             <img src='./corvinal.png'></img>
           </button>
         </div>

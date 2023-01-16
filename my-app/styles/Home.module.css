@@ -7,6 +7,13 @@
     height: 100vh;
   }
 
+  @media(max-width:1440px){
+    .fundo{
+      height: 890px;
+
+    }
+  }
+
   @media(max-width:667px){
     .fundo{
       background: #031C29;
