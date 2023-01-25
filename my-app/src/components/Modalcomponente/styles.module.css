@@ -78,7 +78,8 @@
   @media (max-width:768px){
     .cards{
     width: 74%;
-    height: 535px;
+    height: 600px;
+    
   }
 
   .imgcard{
@@ -86,8 +87,8 @@
   }
 
   .imagem{
-    width: 399px;
-    height: 477px;
+    width: 360px;
+    height: 473px;
   }
 
   .buttondiv{
@@ -95,12 +96,13 @@
   }
 
   .button{
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
   }
 
   .descriptioncard{
     height: 83%;
+    justify-content: center;
   }
 
   .descricao p{
@@ -112,10 +114,42 @@
   }
 }
 
+@media (max-width:629px){
+  .cards{
+    width: 55%;
+    height: 136vh;
+    padding: 3%;
+    margin-top: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.descriptioncard{
+  display: flex;
+  flex-direction: row;
+  margin-top: 5%;
+}
+.buttondiv{
+  width: 0%;
+  height: 0px;
+  width:605px;
+  position: unset;
+}
+.descricao p{
+  font-size: 28px;
+}
+
+.descricao h1{
+  font-size: 24px;
+}
+}
+
+
+
 @media (max-width:425px){
     .cards{
         width: 74%;
-        height: 170vh;
+        height: 100%;
         margin-top: 30%;
         display: flex;
         flex-direction: column;
@@ -128,7 +162,7 @@
 
       .imagem{
         width: 512px;
-        height: 581px;
+        height: 635px;
       }
 
       .buttondiv{
@@ -137,14 +171,14 @@
       }
 
       .button{
-        width: 85px;
-        height: 85px;
+        width: 65px;
+        height: 65px;
         font-size: 52px;
       }
 
       .descricao{
         width: 834px;
-        height: 820px;
+        height: 900px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -152,11 +186,11 @@
       }
 
       .descricao p{
-        font-size: 40px;
+        font-size: 45px;
       }
     
       .descricao h1{
-        font-size: 35px;
+        font-size: 40px;
       }
 }
 

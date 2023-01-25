@@ -9,7 +9,7 @@
 
   @media(max-width:1440px){
     .fundo{
-      height: 890px;
+      height: 921px;
 
     }
   }
@@ -24,13 +24,13 @@
   @media(max-width:425px){
     .fundo{
         background: #031C29;
-        height: 152vh;
+        height: 170vh;
     }
 }
 
   @media  (max-width: 375px) {
     .fundo{
-    height: 156vh;
+    height: 215vh;
     } 
     
   }

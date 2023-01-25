@@ -125,8 +125,17 @@
     .cards {
         width:17%
      }
+     .close{
+        height: 173%
+     }
 }
 
+
+@media(max-width: 1439px) {
+    .close{
+        height: 200%
+     }
+}
 
 @media(max-width: 1024px) {
     .cards {
