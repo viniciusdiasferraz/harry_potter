@@ -3,12 +3,27 @@ import { useState, useEffect } from "react";
 import HeaderPersonagens from "../../src/components/Headerpersonagens";
 import Modalcomponente from "../../src/components/Modalcomponente";
 import styles from "../personagens/styles.module.css";
+import Pagination from "../../src/components/Pagination";
 
 function Personagens() {
   const [resposta, setResposta] = useState();
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [itemSelected, setItemSelected] = useState(null);
   const [casa, setCasa] = useState()
+
+  const [itensPerPage, setItensPerPage] = useState (30)
+  const [currentPage, setCurrentPage] = useState (0)
+  
+  const pages = Math.ceil(resposta?.length / itensPerPage)
+  const startIndex = currentPage * itensPerPage;
+  const endIndex = startIndex + itensPerPage;
+  const currentItens = resposta?.slice(startIndex, endIndex)
+
+  console.log(pages, 'PAGES')
+  console.log(startIndex, 'STARTINDEX')
+  console.log(endIndex, 'endindex')
+  console.log(currentItens)
+
   const selectCharacter = (item) => {
     setItemSelected(item);
     setModalIsOpen(true);
@@ -64,8 +79,6 @@ function Personagens() {
   };
     
 
-
-
   return (
     <div className={styles.corpo}>
       <div className={styles.topo}></div>
@@ -78,9 +91,10 @@ function Personagens() {
         </div>
 
         <div className={styles.containerCards}>
-          {resposta?.map((item) => {
+          
+          {currentItens?.map((item, index) => {
             return (
-              <div className={styles.cards}>
+              <div className={styles.cards} key={index}>
                 <button
                   className={styles.openmodal}
                   onClick={() => selectCharacter(item)}
@@ -94,6 +108,7 @@ function Personagens() {
               </div>
             );
           })}
+
 
           <div className={styles.modal}>
             {resposta && modalIsOpen && (
@@ -123,6 +138,7 @@ function Personagens() {
           </div>
         </div>
       </div>
+      <Pagination pages={pages}  currentPage={currentPage} setCurrentPage={setCurrentPage}/>
     </div>
   );
 }
